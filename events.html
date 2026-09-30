@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1">
+  <title>Workshops and Information Requests | Riverbend Yoga Studio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main">Skip to main content</a>
+  <header>
+    <p>Riverbend Yoga Studio</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Classes and Services</a></li>
+        <li><a href="about.html">About the Studio</a></li>
+        <li><a href="events.html" aria-current="page">Workshops and Inquiries</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <h1>Workshops and Information Requests</h1>
+    <section>
+      <h2>Monthly workshops</h2>
+      <p>Sample workshop schedule for this student project:</p>
+      <ul>
+        <li>First Saturday, 11 a.m.: Beginner Foundations</li>
+        <li>Second Saturday, 11 a.m.: Yoga with a Chair</li>
+        <li>Third Saturday, 11 a.m.: Rest and Restore</li>
+      </ul>
+      <figure>
+        <img src="media/yoga-workshop_c.png"
+          alt="Participants practicing together in a yoga workshop">
+        <figcaption>Workshops offer time to explore a practice
+          and ask questions in a supportive group.</figcaption>
+      </figure>
+    </section>
+    <section class="inquiry-section">
+      <h2>Request a spot or ask a question</h2>
+      <p>This demonstration form validates entries locally.
+        It does not send a request or reserve a place.
+        Please use sample information only.</p>
+      <p>Fields marked with an asterisk (*) are required.</p>
+      <form id="inquiry-form" action="events.html" method="get" novalidate>
+        <fieldset>
+          <legend>Your contact information</legend>
+          <p>
+            <label for="name">Name *</label>
+            <input id="name" name="name" type="text"
+              autocomplete="name" minlength="2" required aria-describedby="name-error">
+            <span id="name-error" class="field-error" aria-live="polite"></span>
+          </p>
+          <p>
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email"
+              autocomplete="email" required aria-describedby="email-error">
+            <span id="email-error" class="field-error" aria-live="polite"></span>
+          </p>
+          <p>
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel"
+              autocomplete="tel" pattern="[+0-9 ]{7,25}"
+              title="Use 7 to 25 digits, spaces, or plus signs." aria-describedby="phone-error">
+            <span id="phone-error" class="field-error" aria-live="polite"></span>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Your yoga interests</legend>
+          <p>
+            <label for="interest">Class or event interest *</label>
+            <select id="interest" name="interest" required aria-describedby="interest-error">
+              <option value="">Choose an option</option>
+              <option>Gentle Yoga</option>
+              <option>Vinyasa Flow</option>
+              <option>Restorative Yoga</option>
+              <option>Private Session</option>
+              <option>Beginner Foundations</option>
+              <option>Yoga with a Chair</option>
+              <option>Rest and Restore</option>
+            </select>
+            <span id="interest-error" class="field-error" aria-live="polite"></span>
+          </p>
+          <p>
+            <label for="experience">Experience level *</label>
+            <select id="experience" name="experience" required aria-describedby="experience-error">
+              <option value="">Choose your experience</option>
+              <option>New to yoga</option>
+              <option>Some experience</option>
+              <option>Regular practice</option>
+            </select>
+            <span id="experience-error" class="field-error" aria-live="polite"></span>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Preferred contact method *</legend>
+          <p>
+            <input id="by-email" name="contact" type="radio"
+              value="email" required>
+            <label for="by-email">Email</label>
+          </p>
+          <p>
+            <input id="by-phone" name="contact" type="radio"
+              value="phone">
+            <label for="by-phone">Phone</label>
+          </p>
+          <p>If you choose phone, include your number above.</p>
+          <span id="contact-error" class="field-error" aria-live="polite"></span>
+        </fieldset>
+        <p>
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="5"
+            cols="32" maxlength="1000" required aria-describedby="message-error"></textarea>
+          <span id="message-error" class="field-error" aria-live="polite"></span>
+        </p>
+        <button type="submit">Check sample request</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>Riverbend Yoga Studio | Student website project</p>
+    <p>Media supplied by Sophia Learning.</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
